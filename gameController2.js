@@ -5,20 +5,50 @@ let curHeldPiece;
 let curHeldPieceStartingPosition;
 
 function startGame() {
+    const backRowPieces = generateRandomizedPositionBlack();
+    const backRowPiecesLowerCase = generateRandomizedPositionWhite();
+
     const starterPosition = [
-    ['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'],
+    backRowPieces,
     ['P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'],
     ['.', '.', '.', '.', '.', '.', '.', '.'],
     ['.', '.', '.', '.', '.', '.', '.', '.'],
     ['.', '.', '.', '.', '.', '.', '.', '.'],
     ['.', '.', '.', '.', '.', '.', '.', '.'],
     ['p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'],
-    ['r', 'n', 'b', 'q', 'k', 'b', 'n', 'r']
+    backRowPiecesLowerCase
 ];
 
     const starterPlayer = 'white';
-
     loadPosition(starterPosition, starterPlayer);
+}
+
+function generateRandomizedPositionBlack() {
+    const backRowPieces = ['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'];
+
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    shuffleArray(backRowPieces);
+    return backRowPieces;
+}
+
+function generateRandomizedPositionWhite() {
+    const backRowPiecesLowerCase = ['r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'];
+
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    shuffleArray(backRowPiecesLowerCase);
+    return backRowPiecesLowerCase;
 }
 
 function loadPosition(position, playerToMove) {
