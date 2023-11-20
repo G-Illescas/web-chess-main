@@ -13,8 +13,7 @@ function startGame() {
     ['.', '.', '.', '.', '.', '.', '.', '.'],
     ['.', '.', '.', '.', '.', '.', '.', '.'],
     ['p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'],
-    ['r', 'n', 'b', 'q', 'k', 'b', 'n', 'r']
-];
+    ['r', 'n', 'b', 'q', 'k', 'b', 'n', 'r']];
 
     const starterPlayer = 'white';
 
@@ -124,12 +123,10 @@ function setPieceHoldEvents() {
                         }
                     }
                 }
-
             curHeldPiece.style.position = 'static';
             curHeldPiece = null;
             curHeldPieceStartingPosition = null;
         }
-    
         hasIntervalStarted = false;
     });
 }
@@ -149,10 +146,10 @@ function movePiece(piece, startingPosition, endingPosition) {
                 destinationSquare.appendChild(piece);
 
                 // check if is check/checkmate
-
-                if (curPlayer == 'white') {
+                if(curPlayer == 'white') {
                     curPlayer = 'black';
-                } else {
+                }
+                else {
                     curPlayer = 'white';
                 }
         }
@@ -186,7 +183,8 @@ function validateBishopMovement(startingPosition, endingPosition) {
             }
             // validate if move puts own king in check
             return true;
-    } else {
+    } 
+    else {
         return false;
     }
 }
@@ -355,3 +353,4 @@ function isEnemyPieceOnEndingPosition(endingPosition) {
 
 startGame();
 setPieceHoldEvents();
+module.exports = {startGame, getPieceImageSource, loadPiece};

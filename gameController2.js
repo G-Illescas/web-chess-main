@@ -35,7 +35,7 @@ function generateRandomizedPositionBlack() {
 
     shuffleArray(backRowPieces);
     return backRowPieces;
-}
+};
 
 function generateRandomizedPositionWhite() {
     const backRowPiecesLowerCase = ['r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'];
@@ -49,7 +49,7 @@ function generateRandomizedPositionWhite() {
 
     shuffleArray(backRowPiecesLowerCase);
     return backRowPiecesLowerCase;
-}
+};
 
 function loadPosition(position, playerToMove) {
     curBoard = position;
@@ -385,3 +385,4 @@ function isEnemyPieceOnEndingPosition(endingPosition) {
 
 startGame();
 setPieceHoldEvents();
+module.exports = {generateRandomizedPositionBlack, generateRandomizedPositionWhite};

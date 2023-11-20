@@ -33,6 +33,18 @@ button {
     align-items: center;
 }
 
+.board2 {
+    width: min-content;
+    margin: 32px auto 0;
+    border: 10px solid red;
+    border-radius: 6px;
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .row {
     display: flex;
     flex-direction: row;
