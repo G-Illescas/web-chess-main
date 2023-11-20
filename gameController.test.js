@@ -17,7 +17,7 @@ describe('Chess Game Functions', () => {
         curPlayer = undefined;
     });
 
-    test('startGame function initializes the game with the correct position and player', () => {
+    test('startGame function initializes the game', () => {
         startGame();
         starterPlayer = "white";
     });
@@ -33,7 +33,7 @@ describe('Chess Game Functions', () => {
         const squareElement = { appendChild: jest.fn() };
         document.getElementById.mockReturnValue(squareElement);
     
-        const piece = 'R';
+        const piece = 'N';
         const position = [1, 1];
         loadPiece(piece, position);
     });
@@ -42,15 +42,11 @@ describe('Chess Game Functions', () => {
 describe('Chess Game Functions', () => {
     test('generateRandomizedPositionBlack returns an array with shuffled black pieces', () => {
         const result = generateRandomizedPositionBlack();
-        // Add assertions to check if the result is valid
         expect(result).toHaveLength(8);
-        // Add more assertions as needed
     });
 
     test('generateRandomizedPositionWhite returns an array with shuffled white pieces', () => {
         const result = generateRandomizedPositionWhite();
-        // Add assertions to check if the result is valid
         expect(result).toHaveLength(8);
-        // Add more assertions as needed
     });
 });
