@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1700447187591" clover="3.2.0">
-  <project timestamp="1700447187591" name="All files">
+<coverage generated="1700447229333" clover="3.2.0">
+  <project timestamp="1700447229333" name="All files">
     <metrics statements="346" coveredstatements="90" conditionals="286" coveredconditionals="28" methods="44" coveredmethods="14" elements="676" coveredelements="132" complexity="0" loc="346" ncloc="346" packages="1" files="2" classes="2"/>
     <file name="gameController.js" path="C:\Users\gillescas\Downloads\web-chess-main\web-chess-main\gameController.js">
       <metrics statements="166" coveredstatements="38" conditionals="143" coveredconditionals="14" methods="20" coveredmethods="5"/>
